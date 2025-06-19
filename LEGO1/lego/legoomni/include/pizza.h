@@ -106,6 +106,19 @@ public:
 		IsleScript::Script* m_actions; // 0x1c
 	};
 
+	enum {
+		e_0 = 0,
+		e_unkIntroduction = 1,
+		e_unkAccepted2 = 2,
+		e_unkStarted3 = 3,
+		e_4 = 4,
+		e_5 = 5,
+		e_6 = 6,
+		e_7 = 7,
+		e_8 = 8,
+		e_unkTimeout9 = 9,
+	};
+
 	PizzaMissionState();
 
 	// FUNCTION: LEGO1 0x10039290
@@ -140,7 +153,7 @@ public:
 	MxS16 GetActorState();
 
 	PizzeriaState* m_pizzeriaState; // 0x08
-	undefined4 m_unk0x0c;           // 0x0c
+	MxU32 m_state;                  // 0x0c
 	Mission m_missions[5];          // 0x10
 	MxU32 m_playedAction;           // 0xb0
 
@@ -205,7 +218,7 @@ private:
 	IsleScript::Script m_speechAction;     // 0x8c
 	MxLong m_startTime;                    // 0x90
 	MxLong m_duration;                     // 0x94
-	MxBool m_unk0x98;                      // 0x98
+	MxBool m_playedLocationAnimation;      // 0x98
 };
 
 #endif // PIZZA_H
