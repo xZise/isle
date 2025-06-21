@@ -581,7 +581,7 @@ void Ambulance::Reset()
 	m_atPoliceTask = 0;
 	g_isleFlags |= Isle::c_playMusic;
 	AnimationManager()->EnableCamAnims(TRUE);
-	AnimationManager()->FUN_1005f6d0(TRUE);
+	AnimationManager()->SetUnknown0x400(TRUE);
 	m_state->m_startTime = INT_MIN;
 	m_state = NULL;
 }

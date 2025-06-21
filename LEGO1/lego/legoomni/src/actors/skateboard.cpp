@@ -100,8 +100,8 @@ MxLong SkateBoard::HandleClick()
 	EnableScenePresentation(m_pizzaVisible);
 
 	Vector3 position = m_roi->GetWorldPosition();
-	AnimationManager()->FUN_10064670(&position);
-	AnimationManager()->FUN_10064740(&position);
+	AnimationManager()->PlaceBrickster(&position);
+	AnimationManager()->PlaceMamaAndPapa(&position);
 	return 1;
 }
 

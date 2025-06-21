@@ -109,8 +109,8 @@ MxLong DuneBuggy::HandleClick()
 	GetCurrentAction().SetObjectId(-1);
 
 	Vector3 position = m_roi->GetWorldPosition();
-	AnimationManager()->FUN_10064670(&position);
-	AnimationManager()->FUN_10064740(&position);
+	AnimationManager()->PlaceBrickster(&position);
+	AnimationManager()->PlaceMamaAndPapa(&position);
 	Enter();
 	ControlManager()->Register(this);
 	return 1;

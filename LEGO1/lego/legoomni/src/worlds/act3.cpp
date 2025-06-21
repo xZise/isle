@@ -679,7 +679,7 @@ void Act3::ReadyWorld()
 {
 	PlantManager()->SetInitialCounters();
 	BuildingManager()->SetInitialCounters();
-	AnimationManager()->FUN_1005f6d0(FALSE);
+	AnimationManager()->SetUnknown0x400(FALSE);
 	VideoManager()->Get3DManager()->SetFrustrum(90.0f, 0.1f, 125.0f);
 
 	m_unk0x426c = g_unk0x100d95e8[rand() % 3];
