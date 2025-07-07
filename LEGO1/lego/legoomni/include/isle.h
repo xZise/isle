@@ -75,11 +75,11 @@ public:
 
 	MxU32 GetState() { return m_state; }
 	ElevatorFloor GetElevatorFloor() { return (ElevatorFloor) m_elevFloor; }
-	MxU8 GetUnknown21() { return m_unk0x021; }
+	MxBool IsSpawnInInfocenter() { return m_spawnInInfocenter; }
 
 	void SetState(MxU32 p_state) { m_state = p_state; }
 	void SetElevatorFloor(ElevatorFloor p_elevFloor) { m_elevFloor = p_elevFloor; }
-	void SetUnknown21(MxU8 p_unk0x21) { m_unk0x021 = p_unk0x21; }
+	void SetSpawnInInfocenter(MxBool p_spawnInInfocenter) { m_spawnInInfocenter = p_spawnInInfocenter; }
 
 	// SYNTHETIC: LEGO1 0x10033960
 	// Act1State::`scalar deleting destructor'
@@ -93,7 +93,7 @@ public:
 	MxBool m_unk0x01e;                            // 0x01e
 	MxBool m_unk0x01f;                            // 0x01f
 	MxBool m_planeActive;                         // 0x020
-	undefined m_unk0x021;                         // 0x021
+	MxBool m_spawnInInfocenter;                   // 0x021
 	MxBool m_unk0x022;                            // 0x022
 	undefined m_unk0x023;                         // 0x023
 	LegoNamedPlane m_motocyclePlane;              // 0x024

@@ -268,10 +268,10 @@ void Isle::ReadyWorld()
 {
 	LegoWorld::ReadyWorld();
 
-	if (m_act1state->GetUnknown21()) {
+	if (m_act1state->IsSpawnInInfocenter()) {
 		GameState()->SwitchArea(LegoGameState::e_infomain);
 		m_act1state->SetState(Act1State::e_none);
-		m_act1state->SetUnknown21(0);
+		m_act1state->SetSpawnInInfocenter(FALSE);
 	}
 	else if (GameState()->GetLoadedAct() != LegoGameState::e_act1) {
 		EnableAnimations(TRUE);
@@ -1305,7 +1305,7 @@ Act1State::Act1State()
 	m_helicopterJetRight = NULL;
 	m_helicopter = NULL;
 	m_jetskiFront = NULL;
-	m_unk0x021 = 1;
+	m_spawnInInfocenter = 1;
 	m_jetskiWindshield = NULL;
 	m_jetski = NULL;
 	m_dunebuggyFront = NULL;
