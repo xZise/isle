@@ -91,7 +91,7 @@ public:
 	MxU32 m_state;                                // 0x018
 	MxS16 m_elevFloor;                            // 0x01c
 	MxBool m_unk0x01e;                            // 0x01e
-	MxBool m_unk0x01f;                            // 0x01f
+	MxBool m_switchedToArea;                      // 0x01f
 	MxBool m_planeActive;                         // 0x020
 	MxBool m_spawnInInfocenter;                   // 0x021
 	MxBool m_unk0x022;                            // 0x022
@@ -177,7 +177,7 @@ protected:
 	void UpdateGlobe();
 	void FUN_10032620();
 	void CreateState();
-	void FUN_10032d30(
+	void LoadStartScript(
 		IsleScript::Script p_script,
 		JukeboxScript::Script p_music,
 		const char* p_cameraLocation,
